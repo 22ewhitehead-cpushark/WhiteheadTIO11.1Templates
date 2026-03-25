@@ -36,6 +36,10 @@ Computer getComputerNumber(Computer& comp){
     return comp;
 }
 
+template <typename T1>
+T1 add(T1 begin, T1 end){
+    return begin + end;
+}
 
 int main(){
     string playerCountS;
@@ -141,6 +145,9 @@ int main(){
             player3.playAgain(player3);
         }
     }while(player1.getAgain() || player2.getAgain() || player3.getAgain());
-    cout << "Thank you for playing my game!\n";
+    string begin = "Thank you ";
+    string end = "for playing my game\n";
+    cout << add(begin, end);
+    //cout << "Thank you for playing my game!\n";
     return 0;
 }
